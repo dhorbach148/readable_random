@@ -3,7 +3,7 @@ require "base64"
 
 class ReadableRandom
   VERSION = File.read( File.join(File.dirname(__FILE__),'..','VERSION') ).strip
-  NON_READABLE = %w[o O 0 1 l / = +]
+  NON_READABLE = %w[o O 0 1 l L i I / = +]
 
   def self.get(size)
     try = random_string(size * 2)
